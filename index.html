@@ -1,0 +1,26 @@
+<html lang="en">
+
+<head>
+    <title>CheckgeoIP example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>checkgeoip.com API example!</h1>
+    <script>
+    // set endpoint and your api key
+    var ip = '72.229.28.185'
+    var api_key = 'YOUR_API_KEY';
+
+    // get the API result via jQuery.ajax
+    $.ajax({
+        url: 'https://api.checkgeoip.com/' + ip + '?api_key=' + api_key,   
+        dataType: 'jsonp',
+        success: function(response) {
+
+            // output the "city" object
+            alert(response.city);
+        }
+    });
+    </script>
+</body>
+</html>
